@@ -10,9 +10,8 @@ const paramsToObject = entries => {
 };
 
 const getParams = () => {
-  var scripts = document.getElementsByTagName('script');
-  var script = scripts[scripts.length - 1];
-  var scriptURL = script.src;
+  var script = document.getElementById('gochat');
+  var scriptURL = script.getAttribute('src');
   var url = new URL(scriptURL);
   var params = paramsToObject(url.searchParams.entries());
   window.open(`https://chat.golead.com.br/${params.id_user}`, 'pagina', "width=390, height=600, top=100, left=110, scrollbars=no");
