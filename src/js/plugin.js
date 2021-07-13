@@ -13,7 +13,7 @@ const getParams = () => {
     var url = new URL(scriptURL);
     var params = paramsToObject(url.searchParams.entries());
     
-    window.open(`https://chat.golead.com.br/${params.id_user}`, 'pagina', "width=390, height=600, top=100, left=110, scrollbars=no");
+    window.open(`https://chat.golead.com.br/${params.id_channel}`, 'pagina', "width=390, height=600, top=100, left=110, scrollbars=no");
 }
 
 const loadButton = () => {
